@@ -1,0 +1,11 @@
+{
+  "name": "math_example_dan",
+  "version": "1.0.2",
+  "description": "projeto de estudo node.js",
+  "main": "bin/main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Daniel Bertolini",
+  "license": "ISC"
+}
