@@ -1,0 +1,16 @@
+{
+  "name": "math_user_dan",
+  "version": "1.0.0",
+  "description": "using dependency",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app/main",
+    "daniel": "node app/main" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "math_example_dan": "^1.0.2"
+  }
+}
