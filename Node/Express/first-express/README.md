@@ -1,3 +1,0 @@
-Anotações
-=====================
-- <%- include('caminho/arquivo'); %>
