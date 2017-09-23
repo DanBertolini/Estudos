@@ -51,3 +51,16 @@ footer{
     background-size: 100% 50px;
     padding: 40px;
 }
+
+.content-3-container{
+    display: flex;
+}
+
+.item{
+    float: left;
+    background-color: cornflowerblue;
+}
+
+.sub-item{
+    padding: 5px;
+}
