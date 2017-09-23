@@ -1,0 +1,53 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color: #eeaaaa;
+    clear: left;
+    padding: 40px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+
+nav ul li a{
+    display: block;
+    font-size: 18px;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+}
+
+section{
+    padding: 20px;
+    background-color: #bbbaaa;
+    width: 80%;
+    float: left;
+}
+
+aside{
+    background-color: orange;
+    float: left;
+    padding: 20px 20px 0px 25px;
+    width: 17%;
+}
+
+footer{
+    clear: left;
+    background-image: url(imgs/pattern-background.jpg);
+    background-repeat: repeat-y;
+    background-size: 100% 50px;
+    padding: 40px;
+}
