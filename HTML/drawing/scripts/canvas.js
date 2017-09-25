@@ -166,15 +166,35 @@ function circularDrawing() {
     var canvas = document.getElementById('myCanvas6');
     var ctx = canvas.getContext('2d');
 
-    ctx.moveTo(50, 50);
-    ctx.lineTo(25, 150);
-    ctx.arcTo(50, 100, 75, 150, 28);
+    ctx.moveTo(75, 50);
+    ctx.lineTo(50, 150);
+    ctx.arcTo(75, 100, 100, 150, 28);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.moveTo(125, 50);
+    ctx.lineTo(100, 150);
+    ctx.arcTo(125, 100, 150, 150, 28);
     ctx.closePath();
     ctx.fill();
 
     ctx.moveTo(50, 150);
     ctx.lineTo(25, 250);
     ctx.arcTo(50, 300, 75, 250, 28);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.moveTo(100, 150);
+    ctx.lineTo(75, 250);
+    //ctx.arcTo(100, 300, 125, 250, 28);
+    ctx.quadraticCurveTo(100, 300, 125, 250);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.moveTo(150, 150);
+    ctx.lineTo(125, 250);
+    //ctx.arcTo(100, 300, 125, 250, 28);
+    ctx.bezierCurveTo(125, 300, 175, 300, 175, 250);
     ctx.closePath();
     ctx.fill();
 
@@ -190,6 +210,7 @@ function circularDrawing() {
     ctx.stroke();
     ctx.fill();
 
+    ctx.translate(100, 0);
     ctx.fillStyle = "red"
     ctx.beginPath();
     ctx.arc(100, 75, 25, 0 * Math.PI, 2 * Math.PI);
