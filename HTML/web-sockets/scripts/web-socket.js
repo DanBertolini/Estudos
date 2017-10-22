@@ -57,7 +57,7 @@ function cancelKeepAlive() {
 }
 function onOpen(evt) {
     writeOutput("CONNECTED");
-    keepAlive();//Evitar errros de timeout mantendo o serviço ativo
+    keepAlive();//Evitar erros de timeout mantendo o serviço ativo
 }
 
 function onClose(evt) {
