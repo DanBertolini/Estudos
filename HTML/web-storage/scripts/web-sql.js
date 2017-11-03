@@ -1,7 +1,7 @@
 var db = openDatabase('Library', '1.0', 'My library', 5 * 1024 * 1024);
 
 window.onload = function () {
-    db.changeVersion('1.0', '1.0', migrateDB, onError, onSuccess);
+    db.changeVersion('1.0', '1.0', createTable, onError, onSuccess);
 }
 
 function createTable(transaction) {
