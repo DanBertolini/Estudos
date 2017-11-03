@@ -5,7 +5,7 @@ window.requestFileSystem(TEMPORARY, 5 * 1024 * 1024, getFile, handleError);
 
 
 function getFile(fileSystem) {
-    fileSystem.root.getFile("", { create: true }, fileOpened, handleError);
+    fileSystem.root.getFile("example.txt", { create: true }, fileOpened, handleError);
 }
 
 function getDirectory(fileSystem) {
