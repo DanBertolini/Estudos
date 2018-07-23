@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.16.3",
-    "gulp-autoprefixer": "^3.0.2"
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-less": "^3.5.0"
   },
   "devDependencies": {
     "browser-sync": "2.24.5",

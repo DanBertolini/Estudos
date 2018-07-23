@@ -11,7 +11,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     jshintStylish = require('jshint-stylish'),
     cssLint = require('gulp-csslint'),
-    autoprefix = require('gulp-autoprefixer');
+    autoprefix = require('gulp-autoprefixer'),
+    less = require('gulp-less');
 
 var argv = require('yargs').argv,
     source = argv.production ? 'dist' : 'src';
@@ -82,19 +83,28 @@ gulp.task('clear-unused', () => {
 gulp.task('server', () => {
     browserSync.init({
         server: {
-            baseDir: 'src' 
+            baseDir: 'src'
         }
     });
 
     gulp.watch(`${source}/**/*.js`).on('change', (event) => {
         gulp.src(event.path)
-        .pipe(jshint())
-        .pipe(jshint.reporter(jshintStylish));
+            .pipe(jshint())
+            .pipe(jshint.reporter(jshintStylish));
     });
     gulp.watch(`${source}/**/*.css`).on('change', (event) => {
         gulp.src(event.path)
-        .pipe(cssLint())
-        .pipe(cssLint.reporter());
+            .pipe(cssLint())
+            .pipe(cssLint.reporter());
+    });
+    gulp.watch(`${source}/**/*.less`).on('change', (event) => {
+        console.log('Compilando arquivo: ' + event.path);
+        gulp.src(event.path)
+            .pipe(less().on('error', (err) => {
+                console.error(err.message);
+            }))
+            .pipe(gulp.dest('src/css'))
+            .pipe(gulp.dest('dist/css'));
     });
     gulp.watch(`${source}/**/*`).on('change', browserSync.reload)
 })
