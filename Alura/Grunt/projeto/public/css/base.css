@@ -1,0 +1,22 @@
+body {
+	font-family: helvetica, serif;
+	height: 500px;
+}
+
+p {
+	text-indent: 2em;
+}
+
+.container {
+	margin: 0 auto;
+	width: 90%;
+	z-index: 9;
+}
+
+.centraliza {
+	text-align: center;
+}
+
+.texto-sombreado {
+	text-shadow: 5px 5px 5px grey;
+}
