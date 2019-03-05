@@ -1,3 +1,5 @@
+import { logarTempoExecucao } from "../helpers/decorators/index";
+
 //namespace Views {
 export abstract class View<T> {
 
@@ -10,6 +12,7 @@ export abstract class View<T> {
         this._escape = escape;
     }
 
+    //@logarTempoExecucao()
     atualizaView(model: T): void {
         let template = this.template(model)
         if (this._escape)
